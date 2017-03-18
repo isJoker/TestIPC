@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jokerwan.testipc">
 
-    <!--自定义权限-->
+    <!-- 自定义权限 -->
     <permission
         android:name="com.jokerwan.testipc.permission.ACCESS_BOOK_SERVICE"
         android:protectionLevel="normal" />
@@ -32,14 +32,19 @@
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
-
         <service
             android:name=".aidl.BookManagerService"
-            android:process=":remote" >
-        </service>
+            android:process=":remote"/>
 
-        <activity android:name=".messenger.MessengerActivity"/>
-        <activity android:name=".aidl.BookManagerActivity"/>
+        <provider
+            android:name=".contentprovider.BookProvider"
+            android:authorities="com.jokerwan.testipc.book.contentprovider"
+            android:permission="com.jokerwan.PROVIDER"
+            android:process=":provider" />
+
+        <activity android:name=".messenger.MessengerActivity" />
+        <activity android:name=".aidl.BookManagerActivity" />
+        <activity android:name=".contentprovider.ProviderActivity"/>
     </application>
 
 </manifest>

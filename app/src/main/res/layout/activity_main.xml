@@ -14,13 +14,20 @@
         android:id="@+id/btn_mian1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击进入MessengerActivity"
+        android:text="Messenger"
         android:onClick="onButton1Click"/>
     <Button
         android:id="@+id/btn_mian2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击进入BOOKMANAGERACTIVITY"
+        android:text="AIDL"
         android:layout_below="@+id/btn_mian1"
         android:onClick="onButton2Click"/>
+    <Button
+        android:id="@+id/btn_mian3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider"
+        android:layout_below="@+id/btn_mian2"
+        android:onClick="onButton3Click"/>
 </RelativeLayout>
