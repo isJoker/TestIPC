@@ -30,4 +30,11 @@
         android:text="ContentProvider"
         android:layout_below="@+id/btn_mian2"
         android:onClick="onButton3Click"/>
+    <Button
+        android:id="@+id/btn_mian4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="socket"
+        android:layout_below="@+id/btn_mian3"
+        android:onClick="onButton4Click"/>
 </RelativeLayout>

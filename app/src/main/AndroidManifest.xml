@@ -12,6 +12,8 @@
 
     <uses-permission android:name="com.jokerwan.testipc.permission.ACCESS_BOOK_SERVICE" />
     <uses-permission android:name="com.jokerwan.PROVIDER" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +36,7 @@
             android:process=":remote" />
         <service
             android:name=".aidl.BookManagerService"
-            android:process=":remote"/>
+            android:process=":remote" />
 
         <provider
             android:name=".contentprovider.BookProvider"
@@ -44,7 +46,15 @@
 
         <activity android:name=".messenger.MessengerActivity" />
         <activity android:name=".aidl.BookManagerActivity" />
-        <activity android:name=".contentprovider.ProviderActivity"/>
+        <activity android:name=".contentprovider.ProviderActivity" />
+
+        <service
+            android:name=".socket.TCPServerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".socket.TCPClientActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"/>
     </application>
 
 </manifest>

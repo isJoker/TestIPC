@@ -8,6 +8,7 @@ import android.view.View;
 import com.jokerwan.testipc.aidl.BookManagerActivity;
 import com.jokerwan.testipc.contentprovider.ProviderActivity;
 import com.jokerwan.testipc.messenger.MessengerActivity;
+import com.jokerwan.testipc.socket.TCPClientActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButton3Click(View view){
         Intent intent = new Intent(this, ProviderActivity.class);
+        startActivity(intent);
+    }
+
+    public void onButton4Click(View view){
+        Intent intent = new Intent(this, TCPClientActivity.class);
         startActivity(intent);
     }
 }
